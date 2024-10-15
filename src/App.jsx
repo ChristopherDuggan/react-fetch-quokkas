@@ -3,6 +3,7 @@ import { useState } from 'react';
 import * as weatherService from './services/weatherService';
 
 import WeatherSearch from './components/WeatherSearch';
+import WeatherDetails from './components/WeatherDetails';
 
 const App = () => {
   const [weather, setWeather] = useState({});
@@ -20,6 +21,7 @@ const App = () => {
     <main>
       <h1>Weather API</h1>
       <WeatherSearch fetchData={fetchData} />
+      <WeatherDetails weather={weather} />
     </main>
   );
 }
